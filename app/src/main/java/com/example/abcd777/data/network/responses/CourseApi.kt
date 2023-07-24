@@ -1,10 +1,11 @@
 package com.example.abcd777.data.network.responses
 
-import com.example.abcd777.data.network.dto.CurrencyDto
+
+import com.example.abcd777.data.network.dto.ForApiItem
 import retrofit2.http.GET
-import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface CourseApi {
-    @GET("kursExchange?city={city}")
-    suspend fun getCountyCurrency(@Path("city") city: String) : CurrencyDto
+    @GET("kursExchange")
+    suspend fun getCountyCurrency(@Query("city") city: String): List<ForApiItem>
 }

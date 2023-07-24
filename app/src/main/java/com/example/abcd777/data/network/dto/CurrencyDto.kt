@@ -2,16 +2,16 @@ package com.example.abcd777.data.network.dto
 
 import com.example.abcd777.domain.models.Currency
 
-data class CurrencyDto(
+data class ForApiItem(
     val EUR_in: String,
     val EUR_out: String,
     val RUB_in: String,
     val RUB_out: String,
     val USD_in: String,
-    val USD_out: String
+    val USD_out: String,
 )
 
-fun CurrencyDto.toCurrency() : Currency {
+fun ForApiItem.toCurrency(): Currency {
     return Currency(
         EUR_in = EUR_in,
         EUR_out = EUR_out,

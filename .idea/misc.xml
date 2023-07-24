@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/tim18/projects/abcd777/app/src/main/res/drawable/ic_city.xml" value="0.276" />
+        <entry key="..\:/Users/tim18/projects/abcd777/app/src/main/res/drawable/ic_launcher_background.xml" value="0.276" />
         <entry key="..\:/Users/tim18/projects/abcd777/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/tim18/projects/abcd777/app/src/main/res/layout/dropdown_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/tim18/projects/abcd777/app/src/main/res/layout/fragment_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/tim18/projects/abcd777/app/src/main/res/layout/item.xml" value="0.36666666666666664" />
       </map>

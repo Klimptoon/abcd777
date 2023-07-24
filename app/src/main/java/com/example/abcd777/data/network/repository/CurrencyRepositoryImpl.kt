@@ -10,6 +10,7 @@ class CurrencyRepositoryImpl @Inject constructor(
     private val api: CourseApi
 ) : CurrencyRepository {
     override suspend fun getCurrency(city: String): Currency {
-        return api.getCountyCurrency(city = city).toCurrency()
+        val response = api.getCountyCurrency(city)
+        return response[0].toCurrency()
     }
 }

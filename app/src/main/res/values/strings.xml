@@ -6,6 +6,22 @@
     <string name="currency_name">Название:</string>
     <string name="currency_buy">Покупка:</string>
     <string name="currency_sell">Продажа:</string>
-    <string name="currency_cost">15.25</string>
+    <string name="currency_cost">-</string>
+    <string name="default_city">Брест</string>
+    <string name="choose_city">Выберите город</string>
+    <string name="USD">USD</string>
+    <string name="EUR">EUR</string>
+    <string name="RUB">RUB</string>
+    <string name="loading">Loading…</string>
+    <string name="error">Something went wrong try again later</string>
+
+    <string-array name="cities">
+        <item>Брест</item>
+        <item>Минск</item>
+        <item>Гродно</item>
+        <item>Гомель</item>
+        <item>Витебск</item>
+        <item>Могилёв</item>
+    </string-array>
 
 </resources>
