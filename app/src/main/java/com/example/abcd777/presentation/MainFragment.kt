@@ -60,6 +60,14 @@ class MainFragment : Fragment() {
 
     private fun viewModelObserve() {                                  //Обсервер данных из запроса
         viewModel.currency.observe(viewLifecycleOwner) {
+            if(it == null) {
+                with(binding) {
+                    errorText.visibility = View.VISIBLE
+                    cardEur.visibility = View.INVISIBLE
+                    cardUsd.visibility = View.INVISIBLE
+                    cardRub.visibility = View.INVISIBLE
+                }
+            }
             with(binding) {
                 it?.let {
                     tvCurrencyBuyEur.text = it.EUR_in

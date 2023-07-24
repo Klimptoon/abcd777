@@ -16,7 +16,7 @@ class MainFragmentViewModel(
     var position = 0
     var city = MutableLiveData<String>()
 
-    private var _currency = MutableLiveData<Currency?>()         //лайв даты для работы приложения
+    private var _currency = MutableLiveData<Currency?>()
     var currency: LiveData<Currency?> = _currency
 
     private var _isConnected = MutableLiveData<Boolean>()
@@ -29,15 +29,16 @@ class MainFragmentViewModel(
         viewModelScope.launch {
             _isConnected.postValue(true)
             _loading.postValue(true)
-            when (val currency = getCurrencyUseCase.execute(city = city)) {
+            val currency = getCurrencyUseCase.execute(city = city)
+            when(currency) {
                 is Resource.Success -> {
                     _loading.postValue(false)
                     _currency.postValue(currency.data)
-
                 }
                 is Resource.Error -> {
                     _isConnected.postValue(false)
                     _loading.postValue(false)
+                    _currency.postValue(null)
                 }
             }
         }
@@ -47,7 +48,8 @@ class MainFragmentViewModel(
         viewModelScope.launch {
             _isConnected.postValue(true)
             _loading.postValue(true)
-            when (val currency = getCurrencyUseCase.execute("Брест")) {
+            val currency = getCurrencyUseCase.execute("Минск")
+            when(currency) {
                 is Resource.Success -> {
                     _loading.postValue(false)
                     _currency.postValue(currency.data)
@@ -56,6 +58,7 @@ class MainFragmentViewModel(
                 is Resource.Error -> {
                     _isConnected.postValue(false)
                     _loading.postValue(false)
+                    _currency.postValue(null)
                 }
             }
         }
